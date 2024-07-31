@@ -1,14 +1,25 @@
 /* styles.css */
-
+html,body{
+    height: 100%;
+    margin: 0;
+    padding:0;
+}
 body {
     font-family: Cursive, Lucida Handwriting;
-    background-color: #333;
+    background-image:url("https://cdnb.artstation.com/p/assets/images/images/029/320/295/original/bogdan-mb0sco-coffeeanim.gif?1601147277");
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
     margin: 0;
     padding: 0;
 }
 
+
 header {
-    background-color: #333;
+    background-color: #b1afaf1a;
     color: white;
     padding: 20px;
     text-align: center;
@@ -28,14 +39,17 @@ textarea {
     height: 200px;
     padding: 10px;
     margin-top: 20px;
+    background-color:#b1afaf1a;
+    font-family: 'Fantasy', Papyrus; /* You can also try custom fonts for a more ancient look */
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fcfcfc;
+    border: 2px solid #000000; /* Gold border to enhance the ancient feel */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-}
 
 .button-group {
     display: flex;
@@ -45,6 +59,7 @@ footer {
 }
 
 .button-group button {
+    font-family: 'Fantasy', Papyrus;
     padding: 10px 20px;
     background-color: white;
     color: black;
@@ -53,7 +68,7 @@ footer {
 }
 
 .button-group button:hover {
-    background-color: #ccc;
+    background-color: #aea7a7;
 }
 
 /* Modal Styles */
@@ -81,3 +96,20 @@ footer {
     margin-top: 0;
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the wrapper takes up at least the full height of the viewport */
+}
+
+.main {
+    flex: 1; /* Makes the main content area grow to fill available space */
+}
+
+footer {
+    text-align: center;
+    font-family: 'Fantasy', Papyrus;
+    padding: 10px;
+    background-color: #b1afaf1a;
+    color: white;
+}

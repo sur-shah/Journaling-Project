@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Journaling Platform</title>
     <link rel="stylesheet" href="styles.css">
-</head>
+
 <body>
     <!-- Music Selection Modal -->
     <div id="music-modal" class="modal">
@@ -22,18 +22,23 @@
     </div>
 
     <!-- Main Content -->
-    <header>
-        <h1>My Journal</h1>
-        <button id="change-music-button">Change Music</button>
-    </header>
-    <main>
-        <textarea placeholder="Write your journal here..."></textarea>
-        <button>Save Entry</button>
-    </main>
-    <footer>
-        <p>&copy; 2024 Journaling Platform</p>
-    </footer>
-
+     <div class ="wrapper">
+        <header>
+            <h1>My Journal</h1>
+            <button id="change-music-button">Change Music</button>
+        </header>
+        <main class = "main">
+            <textarea placeholder="Write your journal here..."></textarea>
+            <div class ="button-group">
+                <button>Save Entry</button>
+                <button>View previous entries</button>
+                <button>How are you feeling today?</button>
+            </div>
+        </main>
+        <footer>
+            <p>Sur Shah</p>
+        </footer>
+    </div>    
     <script src="script.js"></script>
 </body>
 </html>
