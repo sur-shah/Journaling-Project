@@ -61,7 +61,7 @@ textarea {
 .button-group button {
     font-family: 'Fantasy', Papyrus;
     padding: 10px 20px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     color: black;
     border: none;
     cursor: pointer;
@@ -69,6 +69,15 @@ textarea {
 
 .button-group button:hover {
     background-color: #aea7a7;
+}
+
+#change-music-button {
+    font-family: 'Fantasy', Papyrus;
+    padding: 5px 10px;
+    background-color: #b1afaf1a;
+    color: #fcfcfc;
+    border: none;
+    cursor: pointer;
 }
 
 /* Modal Styles */
@@ -110,27 +119,32 @@ footer {
     text-align: center;
     font-family: 'Fantasy', Papyrus;
     padding: 10px;
-    background-color: #b1afaf1a;
+    background-color: #b1afaf00;
     color: white;
 }
 
 .background-selection {
     text-align: center;
+    color: #fcfcfc;
     margin-top: 30px;
 }
 
 #background-search {
     padding: 10px;
     width: 60%;
+    background-color: #b1afaf1a;
+    font-family:'Fantasy', Papyrus;
     margin-bottom: 10px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 2px solid #434343;
+    color: #fcfcfc;
 }
 
 #search-background, #refresh-background {
     padding: 10px 20px;
-    background-color: white;
-    color: black;
+    font-family:'Fantasy', Papyrus;
+    background-color: #b1afaf1a;
+    color: rgb(255, 255, 255);
     border: none;
     cursor: pointer;
     margin: 10px;
