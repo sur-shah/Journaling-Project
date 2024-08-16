@@ -113,3 +113,50 @@ footer {
     background-color: #b1afaf1a;
     color: white;
 }
+
+.background-selection {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#background-search {
+    padding: 10px;
+    width: 60%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#search-background, #refresh-background {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#search-background:hover, #refresh-background:hover {
+    background-color: #aea7a7;
+}
+
+.background-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.background-options img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: border 0.3s;
+}
+
+.background-options img:hover {
+    border: 2px solid #000;
+}
