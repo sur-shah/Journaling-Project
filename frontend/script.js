@@ -19,9 +19,16 @@ document.getElementById('change-music-button').addEventListener('click', functio
 const UNSPLASH_API_KEY = 'UjwSd2HverocUpFhzxw33RW7YhU1QgTnXFJpWTObB_Y';
 
 function fetchImages(query) {
+    console.log('Searching for:', query); // Log the query
     fetch(`https://api.unsplash.com/search/photos?query=${query}&client_id=${UNSPLASH_API_KEY}&per_page=3`)
-        .then(response => response.json())
-        .then(data => displayBackgroundOptions(data.results))
+        .then(response => {
+            console.log('Response:', response); // Log the raw response
+            return response.json();
+        })
+        .then(data => {
+            console.log('Data:', data); // Log the data returned by the API
+            displayBackgroundOptions(data.results);
+        })
         .catch(error => console.error('Error fetching images:', error));
 }
 
@@ -32,8 +39,8 @@ function displayBackgroundOptions(images){
         const imageElement = document.createElement('img');
         imageElement.src = image.urls.small;
         imageElement.alt = image.alt_description;
-        imgElement.onclick = () => setBackground(image.urls.full);
-        backgroundOptions.appendChild(imgElement);
+        imageElement.onclick = () => setBackground(image.urls.full);
+        backgroundOptions.appendChild(imageElement);
     });
 }
 
