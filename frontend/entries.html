@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previous Journal Entries</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Previous Journal Entries</h1>
+        <button id = "back-button" onclick="window.location.href='index.html'">Back to Journal</button>
+    </header>
+    <main class="main">
+        <div id="entries-container"></div>
+    </main>
+    <script>
+        function loadEntries() {
+            const entriesContainer = document.getElementById('entries-container');
+            const entries = JSON.parse(localStorage.getItem('journalEntries')) || [];
+
+            if (entries.length === 0) {
+                entriesContainer.innerHTML = '<p>No entries found.</p>';
+                return;
+            }
+
+            entries.forEach(entry => {
+                const entryDiv = document.createElement('div');
+                entryDiv.className = 'entry';
+
+                const datePara = document.createElement('p');
+                datePara.className = 'entry-date';
+                datePara.textContent = `Date: ${entry.date}`;
+
+                const textPara = document.createElement('p');
+                textPara.className = 'entry-text';
+                textPara.textContent = entry.text;
+
+                entryDiv.appendChild(datePara);
+                entryDiv.appendChild(textPara);
+                entriesContainer.appendChild(entryDiv);
+            });
+        }
+
+        window.onload = loadEntries;
+    </script>
+</body>
+</html>

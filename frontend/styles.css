@@ -174,3 +174,19 @@ footer {
 .background-options img:hover {
     border: 2px solid #000;
 }
+
+.entry-date{
+    color: #fcfcfc;
+}
+.entry-text{
+    color: #fcfcfc;
+}
+
+#back-button{
+    font-family: 'Fantasy', Papyrus;
+    padding: 5px 10px;
+    background-color: #b1afaf54;
+    color: #fcfcfc;
+    border: rgba(0, 0, 0, 0.517);
+    cursor: pointer;
+}

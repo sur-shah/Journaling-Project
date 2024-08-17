@@ -69,6 +69,32 @@ document.getElementById('refresh-background').addEventListener('click', function
     }
 });
 
+// Function to save the current journal entry
+function saveEntry() {
+    const textarea = document.querySelector('textarea');
+    const entry = textarea.value.trim();
+
+    if (entry) {
+        let entries = JSON.parse(localStorage.getItem('journalEntries')) || [];
+        entries.push({ date: new Date().toLocaleString(), text: entry });
+        localStorage.setItem('journalEntries', JSON.stringify(entries));
+        textarea.value = '';  // Clear the textarea after saving
+        alert('Journal entry saved!');
+    } else {
+        alert('Please write something before saving.');
+    }
+}
+
+// Function to redirect to the previous entries page
+function viewEntries() {
+    window.location.href = 'entries.html'; // Redirect to the entries page
+}
+
+// Event listeners for the buttons
+document.getElementById('save-entry').addEventListener('click', saveEntry);
+document.getElementById('view-entries').addEventListener('click', viewEntries);
+
+
 
 
 // Show the modal when the page loads
