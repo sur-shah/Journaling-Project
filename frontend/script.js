@@ -90,6 +90,13 @@ function viewEntries() {
     window.location.href = 'entries.html'; // Redirect to the entries page
 }
 
+function removeEntry(entryToRemove){
+    let entries = JSON.parse(localStorage.getItem('journalEntries')) || [];
+    console.log("Current Entries", entries);
+    console.log("Entry to remove", entryToRemove);
+    entries = entries.filter(entry => entry.text != entryToRemove.text);    
+    localStorage.setItem('journalEntries', JSON.stringify(entries));
+}
 // Event listeners for the buttons
 document.getElementById('save-entry').addEventListener('click', saveEntry);
 document.getElementById('view-entries').addEventListener('click', viewEntries);

@@ -36,8 +36,25 @@
                 textPara.className = 'entry-text';
                 textPara.textContent = entry.text;
 
+                function removeEntry(entryToRemove){
+                    let entries = JSON.parse(localStorage.getItem('journalEntries')) || [];
+                    console.log("Current Entries", entries);
+                    console.log("Entry to remove", entryToRemove);
+                    entries = entries.filter(entry => entry.text != entryToRemove.text);    
+                    localStorage.setItem('journalEntries', JSON.stringify(entries));
+                }
+
+                const remBut = document.createElement("button");
+                remBut.className = 'remove-button';
+                remBut.textContent = 'Remove Entry';
+                remBut.addEventListener('click', function() {
+                    remBut.parentElement.remove();
+                    removeEntry(entry);
+                })
+               
                 entryDiv.appendChild(datePara);
                 entryDiv.appendChild(textPara);
+                entryDiv.appendChild(remBut);
                 entriesContainer.appendChild(entryDiv);
             });
         }
